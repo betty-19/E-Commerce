@@ -1,0 +1,14 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Inter',;
+}
+.headerWrapper p{
+
+font-weight: 700;
+
+font-size: 24px;
+color:#000000;
+
+}
