@@ -1,0 +1,103 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+.home-section1{
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    margin-block: 30px;
+    gap:50px;
+}
+.home-lists{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    border-right: 1px solid #000000;
+   gap:16px;
+   
+}
+.home-lists .home-list{
+    list-style-type: none;
+ 
+font-weight: 400;
+font-size: 16px;
+color: #000000;
+padding-right: 10px;
+
+}
+.voucher{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #000000;
+    padding-inline:40px;
+   
+}
+.voucher-right,.voucher-left{
+    flex:1;
+}
+.voucher-right{
+    width: 496px;
+height: 352px;
+/* angle: 0 deg;
+opacity: 1;
+top: 16px;
+left: 396px; */
+
+}
+.voucher-left{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    /* justify-content: space-between; */
+gap:20px;
+}
+.voucher-right img{
+    width: 100%;
+height: 100%; 
+}
+.voucher-row1{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    /* justify-content: space-between; */
+
+}
+.voucher-row1 p{
+font-weight: 400;
+font-size: 16px;
+color:#FAFAFA;
+
+}
+.off-voucher{
+    font-family: "Inter";
+font-weight: 600;
+font-size: 48px;
+
+
+}
+.voucher-shop-now{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+.voucher-shop-now a{
+font-weight: 500;
+font-size: 16px;
+color:#FAFAFA;
+}
+.discs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+.discs .disc{
+    width: 12px;
+height: 12px;
+/* opacity: 0.5; */
+background-color: #FFFFFF;
+}
