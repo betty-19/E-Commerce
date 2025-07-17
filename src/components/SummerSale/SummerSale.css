@@ -40,7 +40,7 @@
 
 .language {
   position: absolute;
-  right: 40px;
+  right:120px;
   display: flex;
   align-items: center;
 }
@@ -55,7 +55,7 @@
 }
 
 /* ✅ Responsive tweaks */
-@media (max-width: 840px) {
+@media (max-width: 1024px) {
   .SummerSaleWrapper {
     padding: 0 40px;
   }
