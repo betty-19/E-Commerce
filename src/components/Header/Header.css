@@ -4,11 +4,29 @@
     box-sizing: border-box;
     font-family: 'Inter',;
 }
+.headerWrapper,.nav-items,.nav-items-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .headerWrapper p{
 
 font-weight: 700;
 
 font-size: 24px;
 color:#000000;
+
+}
+.nav-items{
+    gap:48px;
+}
+.nav-item{
+list-style-type: none;
+font-family: "Poppins";
+font-weight: 400;
+color:#000000;
+font-size: 16px;
+
+
 
 }
