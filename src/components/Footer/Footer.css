@@ -3,7 +3,7 @@
     padding:0;
     box-sizing: border-box;
     font-family: "poppins",sans-serif;
-    color:#FAFAFA;
+    /* color:#FAFAFA; */
 }
 .footer-header{
     background-color:#000000;
@@ -13,6 +13,7 @@
     justify-content: space-around;
     padding:50px;
     margin-bottom:0;
+    color:#FAFAFA;
 }
 .col{
     display: flex;

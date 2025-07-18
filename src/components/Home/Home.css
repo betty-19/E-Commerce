@@ -1,103 +1,352 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: 'poppins',sans-serif;
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
-.home-section1{
-    display: flex;
-    align-items: start;
-    justify-content: space-around;
-    margin-block: 30px;
-    gap:50px;
-}
-.home-lists{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    border-right: 1px solid #000000;
-   gap:16px;
-   
-}
-.home-lists .home-list{
-    list-style-type: none;
- 
-font-weight: 400;
-font-size: 16px;
-color: #000000;
-padding-right: 10px;
 
+.home-container {
+  padding-inline: 70px;
+  margin-bottom: 20px;
 }
-.voucher{
+
+.home-section1 {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  gap: 50px;
+}
+
+.home-lists {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #00000036;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-top: 30px;
+  list-style: none;
+  gap: 16px;
+}
+
+.home-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #000000;
+  width: 100%;
+}
+
+.fashion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.voucher-container {
+  padding-top: 30px;
+}
+
+.voucher {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #000000;
+  padding: 30px 40px;
+  color: #FAFAFA;
+  gap: 30px;
+}
+
+.voucher-left,
+.voucher-right {
+  flex: 1;
+}
+
+.voucher-right {
+  width: 496px;
+  height: 352px;
+}
+
+.voucher-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.voucher-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.voucher-row1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.voucher-row1 p {
+  font-size: 16px;
+  color: #FAFAFA;
+}
+
+.off-voucher {
+  font-family: "Inter", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.voucher-shop-now {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.voucher-shop-now a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+
+.discs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #000000;
+  padding-bottom: 10px;
+}
+
+.disc {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  color: transparent;
+  cursor: pointer;
+}
+
+.disc.active-desc {
+  border: 2px solid #ffffff;
+  background-color: #DB4444;
+}
+
+
+
+
+
+/* home-section2 */
+.home-section2{
+    margin-block: 100px;
+}
+.today{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    background-color: #000000;
-    padding-inline:40px;
-   
-}
-.voucher-right,.voucher-left{
-    flex:1;
-}
-.voucher-right{
-    width: 496px;
-height: 352px;
-/* angle: 0 deg;
-opacity: 1;
-top: 16px;
-left: 396px; */
-
-}
-.voucher-left{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    /* justify-content: space-between; */
-gap:20px;
-}
-.voucher-right img{
-    width: 100%;
-height: 100%; 
-}
-.voucher-row1{
-    display: flex;
-    align-items: center;
+    justify-content: left;
     gap:20px;
-    /* justify-content: space-between; */
-
 }
-.voucher-row1 p{
-font-weight: 400;
-font-size: 16px;
-color:#FAFAFA;
-
-}
-.off-voucher{
-    font-family: "Inter";
+.today p{
 font-weight: 600;
-font-size: 48px;
-
+font-size: 16px;
+color:#DB4444;
 
 }
-.voucher-shop-now{
+.rectangle{
+width: 20px;
+height: 40px;
+border-radius: 4px;
+background-color:#DB4444 ;
+}
+.flash-sales{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.date > p{
+font-family: "Inter";
+font-weight: 600;
+font-size: 36px;
+color:#000000;
+}
+.date{
+    display: flex;
+    align-items: center; 
+ gap:80px;
+}
+.date-cols{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap:20px;
 }
-.voucher-shop-now a{
-font-weight: 500;
-font-size: 16px;
-color:#FAFAFA;
+.colon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:8px;
+    
+   
 }
-.discs{
+.colon span{
+width: 4px;
+height: 4px;
+border-radius: 50%;
+background-color: #E07575;
+}
+.date-col{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.date-col p:nth-of-type(1){
+font-weight: 500;
+font-size: 12px;
+color:#000000;
+}
+.date-col p:nth-of-type(2){
+font-family: "Inter";
+font-weight: 700;
+font-size: 32px;
+color:#000000;
+
+}
+.today-arrows{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:10px;
+    gap:8px;
 }
-.discs .disc{
-    width: 12px;
-height: 12px;
-/* opacity: 0.5; */
-background-color: #FFFFFF;
+.today-right-arrow,.today-left-arrow{
+      display: flex;
+    align-items: center;
+    justify-content: center;
+width: 46px;
+height: 46px;
+border-radius: 50%;
+background-color: #F5F5F5;
+}
+.today-arrow{
+cursor:pointer;
+}
+
+/* home-section2 */
+
+
+
+
+
+
+
+/* -------------------
+   RESPONSIVE STYLES
+-------------------- */
+
+@media (max-width: 1115px) {
+  .home-container {
+    padding-inline: 40px;
+  }
+
+  .home-section1 {
+    grid-template-columns: 1fr;
+  }
+
+  .home-lists {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-right: none;
+    padding-right: 0;
+    gap: 10px;
+  }
+
+  .home-list {
+    font-size: 14px;
+    width: 48%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+  }
+
+  .voucher {
+    flex-direction: column;
+    /* padding: 20px; */
+    text-align: center;
+  }
+
+  .voucher-left {
+    align-items: center;
+  }
+
+  .voucher-shop-now {
+    justify-content: center;
+  }
+
+  /* .voucher-right {
+    width: 100%;
+    height: auto;
+  } */
+  .voucher-right img {
+    height: auto;
+  }
+  .voucher-right {
+  width: 400px;
+  /* height: 152px; */
+}
+}
+
+@media (max-width: 600px) {
+   /* .home-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #000000;
+  width: 100%;
+} */
+  .home-list {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .off-voucher {
+    font-size: 32px;
+  }
+  .voucher-right {
+  width: 200px;
+  /* height: 152px; */
+}
+  .voucher-row1 p {
+    font-size: 14px;
+  }
+
+  .voucher-shop-now a {
+    font-size: 14px;
+  }
+
+  .discs {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .disc {
+    width: 10px;
+    height: 10px;
+  }
+}
+@media (max-width: 350px) {
+.voucher-right {
+  width: 150px;
+  /* height: 152px; */
+}
+  .home-container {
+    padding-inline: 20px;
+  }
+  .home-list {
+    width: 100%;
+    font-size: 12px;
+  }
+
 }
