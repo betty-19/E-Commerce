@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,26 @@
 
 .read-the-docs {
   color: #888;
+} */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* background-color: red; */
 }
+
+.app-wrapper {
+  min-height: 100vh;  /* Use full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;  /* Pushes Footer down */
+}
+
+
+.main-content {
+  flex: 1;
+}
+
