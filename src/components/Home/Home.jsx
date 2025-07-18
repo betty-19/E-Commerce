@@ -128,7 +128,7 @@ return(
                 <div className="today-products">
                     <div className="today-product-container">
                         <div className="today-product">
-                        <div className="today-product-head">
+                        {/* <div className="today-product-head"></div> */}
                             <div className="today-product-percentage">
                             -40%
                         </div>
@@ -141,7 +141,7 @@ return(
                                    <FiEye size={24}/>
                             </div>
                         </div>
-                        </div>
+                        
                         <div className="product-img">
                             <img src={Gamepad} alt="" />
                         </div>

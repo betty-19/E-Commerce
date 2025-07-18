@@ -234,7 +234,7 @@ cursor:pointer;
 .today-products{
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+    /* justify-content: center; */
     gap:30px;
     margin-top:40px;
     overflow-x: hidden;
@@ -242,54 +242,68 @@ cursor:pointer;
 .today-product{
     background-color: #F5F5F5;
     border-radius: 4px;
-    padding:15px;
+    padding: 15px;
     width: 270px;
-height: 250px;
-
-
+    height: 250px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 .today-product-head{
     display: flex;
     align-items: center;
     justify-content: space-between;
+   
 }
 .today-product-percentage{
 font-weight: 400;
-font-size: 12px;
-color:#FAFAFA;
-width: 55px;
-height: 26px;
-border-radius: 4px;
-padding-top: 4px 12px;
-background-color: #DB4444;
-display: flex;
-align-items: center;
-justify-content: center;
+    font-size: 12px;
+    color: #FAFAFA;
+    width: 55px;
+    height: 26px;
+    border-radius: 4px;
+    padding: 4px 12px;
+    background-color: #DB4444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 
 }
 .heart-eye{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:8px;
+    gap: 8px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 .product-eye,.product-heart{
     width: 34px;
-height: 34px;
-border-radius: 50%;
-background-color: #FFFFFF;
-display: flex;
-align-items: center;
-justify-content: center;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .product-img{
     width: 172px;
 height: 152px;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .product-img img{
     width: 100%;
     height: 100%;
+    object-fit: contain;
+ 
 }
 .today-product-container{
     display: flex;
