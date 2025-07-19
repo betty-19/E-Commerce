@@ -1,0 +1,1037 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.home-container {
+  padding-inline: 70px;
+  margin-bottom: 20px;
+}
+
+.home-section1 {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  gap: 50px;
+}
+
+.home-lists {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #00000036;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-top: 30px;
+  list-style: none;
+  gap: 16px;
+}
+
+.home-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #000000;
+  width: 100%;
+}
+
+.fashion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.voucher-container, .music-experience-container{
+  padding-top: 30px;
+}
+
+.voucher, .music-experience{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #000000;
+  padding: 30px 40px;
+  color: #FAFAFA;
+  gap: 30px;
+}
+
+.voucher-left,
+.voucher-right,.music-experience-left,
+.music-experience-right {
+  flex: 1;
+}
+
+.voucher-right,.music-experience {
+  width: 496px;
+  height: 352px;
+}
+
+.voucher-right img,.music-experience-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.voucher-left ,.music-experience-left{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.voucher-row1 ,.music-experience-row1{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.voucher-row1 p ,.music-experience-row1 p{
+  font-size: 16px;
+  color: #FAFAFA;
+}
+
+.off-voucher ,.off-music-experience{
+  font-family: "Inter";
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.voucher-shop-now {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.voucher-shop-now a ,.music-experience-shop-now a{
+  font-size: 16px;
+  font-weight: 500;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+
+.discs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #000000;
+  padding-bottom: 10px;
+}
+
+.disc {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  color: transparent;
+  cursor: pointer;
+}
+
+.disc.active-desc {
+  border: 2px solid #ffffff;
+  background-color: #DB4444;
+}
+
+
+
+
+
+/* home-section2 */
+.home-section2{
+    padding-block: 100px 70px;
+    border-bottom: 0.5px solid #00000036;
+}
+.today,.section-title{
+    display: flex;
+    align-items: center;
+    /* justify-content: left; */
+    gap:1rem;
+}
+.section-title p{
+font-weight: bold;
+font-size: 16px;
+color:#DB4444;
+
+}
+.rectangle{
+width: 1.25rem;
+  height: 2.5rem;
+border-radius: 4px;
+background-color:#DB4444 ;
+}
+.flash-sales,.section-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.date > p{
+font-family: "Inter";
+font-weight: 600;
+font-size: 36px;
+color:#000000;
+}
+.date{
+    display: flex;
+    align-items: center; 
+    flex-wrap: wrap;
+ gap:80px;
+}
+.date-cols{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+  gap: 2rem;
+}
+.colon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:8px;
+    
+   
+}
+.colon span{
+width: 4px;
+height: 4px;
+border-radius: 50%;
+background-color: #E07575;
+}
+.date-col{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.date-col p:nth-of-type(1){
+font-weight: 500;
+font-size: 12px;
+color:#000000;
+}
+.date-col p:nth-of-type(2){
+font-family: "Inter";
+font-weight: 700;
+font-size: 32px;
+color:#000000;
+
+}
+.section-arrows{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:8px;
+}
+.section-right-arrow,.section-left-arrow{
+      display: flex;
+    align-items: center;
+    justify-content: center;
+width: 46px;
+height: 46px;
+border-radius: 50%;
+background-color: #F5F5F5;
+}
+.section-arrow{
+cursor:pointer;
+}
+.today-products{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap:30px;
+    margin-top:40px;
+    overflow-x: hidden;
+    /* flex-wrap: wrap; */
+}
+.today-product{
+    background-color: #F5F5F5;
+    border-radius: 4px;
+    padding: 15px;
+    width: 270px;
+    height: 250px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.today-product-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.today-product-percentage{
+font-weight: 400;
+    font-size: 12px;
+    color: #FAFAFA;
+    width: 55px;
+    height: 26px;
+    border-radius: 4px;
+    padding: 4px 12px;
+    background-color: #DB4444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+}
+.heart-eye{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.product-eye,.product-heart{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-img{
+    width: 172px;
+height: 152px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.product-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+ 
+}
+.today-product-container{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+.today-product-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:8px;
+}
+.today-product-info >p{
+font-weight: 500;
+font-size: 16px;
+color:#000000;
+}
+.discount,.rates{
+    display: flex;
+    align-items: center;
+    gap:12px;
+}
+.discount p:nth-of-type(1),.discount p:nth-of-type(2){
+font-weight: 500;
+font-size: 16px;
+
+}
+.discount p:nth-of-type(1){
+color:#DB4444;
+}
+.discount p:nth-of-type(2){
+text-decoration: line-through;
+}
+
+.star{
+    color:#FFAD33;
+}
+.section2-view-all{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section2-view-all button{
+  /* width: 234;
+height: 56; */
+
+border-radius: 4px;
+padding: 16px 48px;
+background-color: #DB4444;
+border:none;
+margin-top: 50px;
+
+font-weight: 500;
+color:#FAFAFA;
+font-size: 16px;
+
+
+}
+/* home-section2 */
+
+
+/* home-secttion3 */
+.home-section3{
+padding-block:100px 70px;
+  border-bottom: 0.5px solid #00000036;
+}
+.section-head > p{
+font-family: "Inter";
+font-weight: 600;
+font-size: 36px;
+color:#000000;
+
+
+}
+/* .section-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+} */
+.categories-container{
+  display: flex;
+  align-items: center;
+  gap:30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top:50px;
+}
+.category{
+  border: 1px solid #0000004D;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 170px;
+height: 145px;
+border-radius: 4px;
+justify-content: center;
+gap:20px;
+gap: 20px;
+  flex: 1 1 150px; 
+  max-width: 170px;
+
+}
+
+/* home-secttion3 */
+
+
+/* home-section4 */
+.home-section4{
+padding-block:100px 70px;
+
+}
+.section-view-all{
+border-radius: 4px;
+padding: 16px 48px;
+border:none;
+background-color: #DB4444;
+font-weight: 500;
+font-size: 16px;
+color:#FAFAFA;
+}
+/* home-section4 */
+
+/* home-section5 */
+.music-row1{
+font-weight: 600;
+color:#00FF66;
+font-size: 16px;
+}
+.time{
+  width: 62px;
+height: 62px;
+border-radius: 50%;
+background-color: #FFFFFF;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.time p:nth-of-type(1){
+font-weight: 600;
+font-size: 16px;
+color:#000000;
+
+}
+.music-experience-shop-now{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.time p:nth-of-type(2){
+
+font-weight: 400;
+
+font-size: 11px;
+color:#000000;
+
+}
+.buy-now{
+border-radius: 4px;
+padding: 16px 48px;
+background-color: #00FF66;
+font-weight: 500;
+font-size: 16px;
+color:#FAFAFA;
+border:none;
+}
+/* home-section5 */
+
+/* home-section6 */
+.home-section6{
+padding-block:100px 70px;
+
+}
+.explore-products{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap:30px;
+    margin-top:40px;
+    /* overflow-x: hidden; */
+    flex-wrap: wrap;
+}
+.section-new{
+font-weight: 400;
+    font-size: 12px;
+    color: #FAFAFA;
+    width: 55px;
+    height: 26px;
+    border-radius: 4px;
+    padding: 4px 12px;
+    background-color: #00FF66;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+}
+/* home-section6 */
+
+/* home-section7*/
+
+.home-section7{
+padding-block:100px 70px;
+
+}
+.new-arrival{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+gap:25px;
+margin-top:50px;
+}
+.play-station5{
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: #000000;
+}
+.womens-collections{
+    grid-column: span 2;
+ 
+  background-color: #000000;
+}
+.speakers,.perfume{
+  background-color: #000000;
+}
+/* .speakers img{
+  width: 190px;
+height: 221px;
+}
+ .play-station5 img{
+  width: 511px;
+height: 511px;
+}
+.perfume img{
+  width: 201px;
+height: 203px;
+}
+.womens-collections img{
+width: 432px;
+height: 286px;
+} */
+.new-arrival img {
+  object-fit: cover;
+ 
+}
+
+.womens-collections,
+.perfume,
+.play-station5,
+.speakers {
+  position: relative;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  /* overflow: hidden; */
+}
+.speakers img,
+.perfume img,
+.play-station5 img {
+  object-fit: cover;
+  max-width: 100%;
+  /* height: auto; */
+}
+
+.womens-collections {
+  flex-direction: row-reverse; 
+  justify-content: space-between;
+
+}
+.womens-collections img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+   transform: scaleX(-1);
+  
+}
+.womens-collections .new-arrival-info {
+  position: static;
+  color: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding-left: 20px;
+}
+.new-arrival-info{
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  color:#FAFAFA;
+  position: absolute;
+  bottom: 50px;       
+  left: 20px; 
+  gap:16px;
+}
+.speakers .new-arrival-info, .perfume .new-arrival-info{
+  gap:8px;
+}
+.new-arrival-info p:nth-of-type(1){
+  font-family: "Inter";
+font-weight: 600;
+font-size: 24px;
+
+}
+.new-arrival-info p:nth-of-type(2){
+
+font-weight: 400;
+
+font-size: 14px;
+
+}
+.new-arrival-info a{
+
+font-weight: 500;
+
+font-size: 16px;
+color:#FFFFFF;
+text-decoration: underline
+
+}
+/* home-section7 */
+
+/* home-section8 */
+.home-section8 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 88px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.delivery {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  margin: 20px;
+  max-width: 280px;
+  text-align: center;
+}
+
+.delivery p:nth-of-type(1) {
+  font-weight: 600;
+  font-size: 20px;
+  color: #000000;
+}
+
+.delivery p:nth-of-type(2) {
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+}
+
+.delivery-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #000000;
+  border: 10px solid #98939b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delivery-icon1 {
+  color: #ffffff;
+}
+
+
+
+
+/* home-section8 */
+
+/* -------------------
+   RESPONSIVE STYLES
+-------------------- */
+
+@media (max-width: 1115px) {
+  .home-container {
+    padding-inline: 40px;
+  }
+
+  .home-section1 {
+    grid-template-columns: 1fr;
+  }
+
+  .home-lists {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-right: none;
+    padding-right: 0;
+    gap: 10px;
+  }
+
+  .home-list {
+    font-size: 14px;
+    width: 48%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+  }
+
+  .voucher {
+    flex-direction: column;
+    /* padding: 20px; */
+    text-align: center;
+  }
+
+  .voucher-left {
+    align-items: center;
+  }
+
+  .voucher-shop-now {
+    justify-content: center;
+  }
+
+  /* .voucher-right {
+    width: 100%;
+    height: auto;
+  } */
+  .voucher-right img {
+    height: auto;
+  }
+  .voucher-right {
+  width: 400px;
+  /* height: 152px; */
+}
+  .categories-container {
+    justify-content: center;
+    gap: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .home-section8 {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .delivery {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .delivery p:nth-of-type(1) {
+    font-size: 18px;
+  }
+
+  .delivery p:nth-of-type(2) {
+    font-size: 13px;
+  }
+
+  .delivery-icon {
+    width: 60px;
+    height: 60px;
+    border-width: 8px;
+  }
+
+  .delivery-icon1 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 600px) {
+   /* .home-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #000000;
+  width: 100%;
+} */
+  .home-list {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .off-voucher {
+    font-size: 32px;
+  }
+  .voucher-right {
+  width: 200px;
+  /* height: 152px; */
+}
+  .voucher-row1 p {
+    font-size: 14px;
+  }
+
+  .voucher-shop-now a {
+    font-size: 14px;
+  }
+
+  .discs {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .disc {
+    width: 10px;
+    height: 10px;
+  }
+  .today-products ,.explore-products{
+    flex-direction: column; /* ✅ Stack vertically on small screens */
+    align-items: center;
+  }
+
+  .today-product-container {
+    width: 100%; /* Full width container on small screens */
+    align-items: center;
+  }
+
+  .today-product {
+    width: 90%; /* Make the product itself take most of the screen width */
+    height: auto;
+  }
+
+  .product-img {
+    /* width: 100%; */
+    height: auto;
+  }
+   .date > p {
+    font-size: 1.75rem;
+  }
+
+  .date-col p:nth-of-type(2) {
+    font-size: 1.5rem;
+  }
+
+  .date-col p:nth-of-type(1) {
+    font-size: 0.7rem;
+  }
+
+  .section-title p{
+    font-size: 0.9rem;
+  }
+
+  .rectangle {
+    width: 1rem;
+    height: 2rem;
+  }
+
+  .today-right-arrow,
+  .today-left-arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+   .categories-container {
+    justify-content: center;
+  }
+
+  .category {
+    width: 140px;
+    height: 130px;
+  }
+  .section-view-all{
+
+padding: 13px 40px;
+
+font-size: 14px;
+
+}
+  .new-arrival {
+    grid-template-columns: 1fr;
+  }
+
+  .play-station5, .womens-collections {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .new-arrival-info p:nth-of-type(1){
+
+font-size: 20px;
+
+}
+.new-arrival-info p:nth-of-type(2){
+
+
+
+font-size: 12px;
+
+}
+.new-arrival-info a{
+
+
+
+font-size: 14px;
+
+
+}
+}
+@media (max-width: 350px) {
+.voucher-right {
+  width: 150px;
+  /* height: 152px; */
+}
+  .home-container {
+    padding-inline: 20px;
+  }
+  .home-list {
+    width: 100%;
+    font-size: 12px;
+  }
+  .product-img{
+    width: 132px;
+height: 112px;
+
+}
+.music-experience-shop-now{
+  flex-direction: column;
+}
+
+
+
+
+}
+@media (max-width: 480px) {
+  .flash-sales,.section-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .date {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .date-cols {
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  .date > p,.section-head > p {
+    font-size: 1.5rem;
+  }
+
+  .date-col p:nth-of-type(2) {
+    font-size: 1.25rem;
+  }
+
+  .section-arrows {
+    justify-content: flex-start;
+  }
+  .today-product-percentage,.section-new{
+
+    font-size: 10px;
+
+    width: 40px;
+    height: 20px;}
+
+    .product-eye,.product-heart{
+    width: 30px;
+    height: 30px;}
+    .section-right-arrow,.section-left-arrow{
+    
+width: 35px;
+height: 35px;
+
+}
+ .category {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .categories-container {
+    flex-direction: column;
+    align-items: center;
+  }
+    .section-view-all{
+
+padding: 10px 25px;
+
+font-size: 12px;
+
+}
+.time{
+  width: 50px;
+height: 50px;
+}
+.time p:nth-of-type(1){
+font-size: 14px;
+
+}
+.time p:nth-of-type(2){
+font-size: 9px;
+}
+.buy-now{
+padding: 10px 30px;
+font-size: 16px;
+}
+  .new-arrival-info p:nth-of-type(1){
+
+font-size: 18px;
+
+}
+.new-arrival-info p:nth-of-type(2){
+
+
+
+font-size: 10px;
+
+}
+.new-arrival-info a{
+
+
+
+font-size: 12px;
+
+
+}
+.new-arrival-info{
+
+  gap:10px;
+}
+.speakers .new-arrival-info, .perfume .new-arrival-info{
+  gap:5px;
+}
+}
