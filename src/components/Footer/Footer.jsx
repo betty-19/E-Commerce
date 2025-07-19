@@ -10,6 +10,7 @@ import QrCode from '../../assets/images/qrcode.jpg';
 import PlayStore from '../../assets/images/playStore.png';
 import AppStore from '../../assets/images/appStore.png';
 import { FaLinkedinIn } from "react-icons/fa";   // LinkedIn outline-like
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -18,6 +19,7 @@ import { FaApple } from 'react-icons/fa';
 import { FaTelegramPlane } from 'react-icons/fa';
 
 const Footer = () =>{
+    const nav = useNavigate();
     return(
         <>
        <div className="footer-header">
@@ -42,10 +44,10 @@ const Footer = () =>{
             <div className="col">
                 <p className="footer-title">Account</p>
                 <div className="col-lists">
-                    <p>My Account</p>
-                <p>Login / Register</p>
+                    <p onClick={()=>{nav('/productDetails')} }>My Account</p>
+                <p onClick={()=>{nav('/notfound')} }>Login / Register</p>
                 <p>Cart</p>
-                <p>Wishlist</p>
+                <p onClick={()=>{nav('/wishlist')} }>Wishlist</p>
                 <p>Shop</p>
                 </div>
                 

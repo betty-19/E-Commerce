@@ -1,0 +1,86 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins','Inter';
+}
+.wishlist-wrapper
+{
+    padding-inline: 70px;
+  margin-block: 50px;
+}
+/* section1 */
+.wishlist-section-head{
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+}
+.wishlist-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* allows items to stack if needed */
+  gap: 12px;
+  padding: 0 16px;
+}
+.wishlist-section-head p{
+font-weight: 400;
+font-size: 20px;
+color:#000000;
+}
+.wishlist-section-head .section-all{
+  border-radius: 4px;
+  padding: 12px 24px;
+  border: 1px solid #00000080;
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+/* section1 */
+
+/* section2 */
+.wishlist-section2{
+    margin-block:70px;
+}
+/* section2 */
+
+@media (max-width: 768px) {
+    .wishlist-wrapper
+{
+    padding-inline: 30px;
+  margin-block: 50px;
+}
+  .wishlist-section-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .wishlist-section-head p {
+    font-size: 18px;
+  }
+
+  .wishlist-section-head .section-all {
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+}
+@media (max-width: 468px) {
+    .wishlist-wrapper
+{
+    padding-inline: 15px;
+  margin-block: 50px;
+}
+.wishlist-section-head .section-all {
+
+    padding: 5px;
+    font-size: 12px;
+    
+  }
+}
