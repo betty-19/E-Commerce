@@ -16,6 +16,9 @@ import { RiLogoutBoxLine } from 'react-icons/ri';
 import { FiShoppingBag } from 'react-icons/fi';
 import { useNavigate } from "react-router-dom";
 
+import { useSelector } from 'react-redux';
+import { useLocation } from "react-router-dom";
+
 
 
 
@@ -24,6 +27,11 @@ const Header=()=>{
     const [activeNav,setActiveNav] = useState('home');
     const [windowWidth,setWindowWidth] = useState(window.innerWidth);
     const [showDropdown,setShowDropdown] = useState(false);
+    const cartItemCount = useSelector(state => state.cart.items.length);
+    const location = useLocation();
+    const hideIcons = location.pathname === '/' || location.pathname === '/login';
+
+
     const nav = useNavigate();
 
     useEffect(()=>{
@@ -40,13 +48,15 @@ const Header=()=>{
     <p >Exclusive</p>
 
         <ul className="nav-items">
-        <li className={`nav-item ${activeNav === 'home' ? 'active' : ''}`} onClick={() => {setActiveNav('home');nav('/')}}>Home</li>
+        <li className={`nav-item ${activeNav === 'home' ? 'active' : ''}`} onClick={() => {
+          setActiveNav('home');
+          {!hideIcons && nav('/home')}}}>Home</li>
         <li className={`nav-item ${activeNav === 'contact' ? 'active' : ''}`} onClick={() => setActiveNav('contact')}>Contact</li>
         <li className={`nav-item ${activeNav === 'about' ? 'active' : ''}`} onClick={() => setActiveNav('about')}>About</li>
         <li className={`nav-item ${activeNav === 'signup' ? 'active' : ''}`} onClick={() => 
           {
             setActiveNav('signup');
-            nav('/signup')
+            nav('/')
 
           }}>Sign Up</li>
         </ul>
@@ -58,12 +68,12 @@ const Header=()=>{
            
         </div>
          
-       <div className="header-icons">
+    {!hideIcons && <div className="header-icons">
   <AiOutlineHeart size={iconSize} className="heart-icon" />
   
   <div className="cart" onClick={()=>nav('/cart')}>
     <FiShoppingCart size={iconSize} className="cart-icon" />
-    <div className="cart-no">2</div>
+   {cartItemCount >0 && <div className="cart-no">{cartItemCount}</div>} 
   </div>
 
   <div className="user-dropdown-container">
@@ -97,7 +107,7 @@ const Header=()=>{
       </div>
     )}
   </div>
-</div>
+</div>}   
 
  </div>
 

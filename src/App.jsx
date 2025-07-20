@@ -1,8 +1,5 @@
-
-
-
-import { Routes,Route } from "react-router-dom"
-import SummerSale from "./components/SummerSale/SummerSale"
+import { Routes, Route } from "react-router-dom";
+import SummerSale from "./components/SummerSale/SummerSale";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
@@ -11,9 +8,8 @@ import NotFound from "./pages/NotFound/NotFound";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import SignUp from "./pages/SignUp/SignUp";
 import Login from "./pages/Login/Login";
-import Cart from "./pages/Cart/Cart"
-// import './App.css'
-
+import Cart from "./pages/Cart/Cart";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute"; 
 
 function App() {
   return (
@@ -22,14 +18,43 @@ function App() {
       <Header />
       <main className="main-content">
         <Routes>
-          <Route path="/" element={<Home />} />
-           <Route path="/wishlist" element={<Wishlist />} />
-           <Route path="/notfound" element={<NotFound />} />
-           <Route path="/productDetails" element={<ProductDetails />} />
-           <Route path="/signup" element={<SignUp />} />
-           <Route path="/login" element={<Login />} />
-           <Route path="/cart" element={<Cart/>}/>
+          <Route path="/" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
 
+          {/*  Protected Routes */}
+          <Route
+            path="/home"
+            element={
+              <ProtectedRoute>
+                <Home />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/wishlist"
+            element={
+              <ProtectedRoute>
+                <Wishlist />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/productDetails"
+            element={
+              <ProtectedRoute>
+                <ProductDetails />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/cart"
+            element={
+              <ProtectedRoute>
+                <Cart />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="/notfound" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />
@@ -37,5 +62,4 @@ function App() {
   );
 }
 
-
-export default App
+export default App;

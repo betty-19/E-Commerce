@@ -44,6 +44,11 @@ height: 54px;
     left: 0;
     top:1px;
     color:red;
+    display: none;
+    cursor: pointer;
+}
+.cart-item-img:hover .close-icon{
+display: flex;
 }
 /* .subtotal-col,.quantity-col,.price-col,.product-col{
     flex:1;
@@ -77,7 +82,7 @@ font-weight: 500;
 font-size: 16px;
 color:#000000;
 background-color: #fff;
-
+cursor: pointer;
 
 
  }
@@ -169,6 +174,9 @@ justify-items: center;
 display: flex;
 align-items: center;
 justify-content: center;}
+.mob-view{
+    display: none;
+}
 @media (max-width: 1024px) {
   .coupon-cartTotal {
     flex-direction: column;
@@ -219,6 +227,12 @@ justify-content: center;}
 
   .cart-wrapper {
     padding-inline: 20px;
+  }
+  .cart-title{
+    display: none;
+  }
+  .mob-view{
+    display: block;
   }
 }
 

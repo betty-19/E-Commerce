@@ -24,6 +24,8 @@ import DuffleBag from '../../assets/images/duffleBag.png';
 import Cooler from '../../assets/images/cooler.png';
 import BookSelf from '../../assets/images/bookself.png';
 import BoomBox from '../../assets/images/boomBox.png';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../redux/cartSlice';
 
 
 
@@ -48,25 +50,56 @@ import { RiShieldCheckLine } from 'react-icons/ri';
 
 
 import { AiOutlineArrowUp } from 'react-icons/ai';
+// import { getAuth } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../../firease";
 
 
 
 
 
 
-<FaApple size={24} />
+
+
+
 
 const Home = ()=>{
 
 const [activeDesc, setActiveDesc] = useState("disk3");
   const [windowWidth,setWindowWidth] = useState(window.innerWidth);
+    const dispatch = useDispatch();
+
+
+
+const [user, setUser] = useState(null);
+
+useEffect(() => {
+  const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
+
+  return () => unsubscribe();
+}, []);
+
 
     useEffect(()=>{
         const handleResize = () => setWindowWidth(window.innerWidth);
         window.addEventListener("resize",handleResize);
         return() =>window.removeEventListener("resize",handleResize);
     },[])
+
     const iconSize = windowWidth < 480 ?18 : 24;
+    
+const handleAddToCart = (product) => {
+  if (!user) {
+    alert('You must be logged in to add items to cart!');
+    return;
+  }
+
+  dispatch(addToCart(product));
+ alert('Item added to cart!');
+};
+
 
 return(
     <div className="home-container">
@@ -710,7 +743,15 @@ return(
                         <div className="product-img">
                             <img src={Camera} alt="" />
                         </div>
-                        
+                        <div className='add-to-cart' onClick={() =>
+    handleAddToCart({
+      id: 1,
+      name: 'CANON EOS DSLR Camera',
+      price: 360,
+      quantity: 1,
+      image: Camera
+    })
+  }>Add To Cart</div>
 
                     </div>
                     <div className="today-product-info">
@@ -730,6 +771,7 @@ return(
                             <span>(95)</span>
 
                         </div>
+                        
                     </div>
                     </div>
                         <div className="today-product-container">
@@ -748,6 +790,15 @@ return(
                         <div className="product-img">
                             <img src={Laptop} alt="" />
                         </div>
+                        <div className='add-to-cart' onClick={() =>
+    handleAddToCart({
+      id: 2,
+      name: 'ASUS FHD Gaming Laptop',
+      price: 700,
+      quantity: 1,
+      image: Laptop
+    })
+  }>Add To Cart</div>
                         
 
                     </div>

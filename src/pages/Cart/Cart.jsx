@@ -3,7 +3,17 @@ import './Cart.css'
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import Monitor from '../../assets/images/monitor.png'
 import { AiFillCloseCircle } from 'react-icons/ai'
+import { useSelector, useDispatch } from 'react-redux';
+import { removeFromCart, updateQuantity } from '../../redux/cartSlice';
+
 const Cart = () =>{
+
+    const cartItems = useSelector(state => state.cart.items);
+const dispatch = useDispatch();
+const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+const shippingCost = 0; // Free shipping
+const total = subtotal + shippingCost;
+
 return(
     <div className='cart-wrapper'>
         <div className="path">
@@ -18,24 +28,33 @@ return(
                 <p>Quantity</p>
                 <p>Subtotal</p>
             </div>
-            <div className="cart-items">
-                <div className='product-col'>
-                    <div className="cart-item-img">
-                        <img src={Monitor} alt="" />
-                        <AiFillCloseCircle className='close-icon'/>
-                    </div>
-                    <div className="cart-item-name">
-                        LCD Monitor
+            {cartItems.map(item => (
+  <div className="cart-items" key={item.id}>
+   <label className='mob-view'>Product:</label> <div className='product-col'>
+      <div className="cart-item-img">
+        <img src={item.image} alt="" />
+        <AiFillCloseCircle
+          className='close-icon'
+          onClick={() => dispatch(removeFromCart(item.id))}
+        />
+      </div>
+     <div className="cart-item-name">{item.name}</div>
+    </div>
+   <label className='mob-view'>Price:</label> <div className="price-col">${item.price}</div>
+    <label className='mob-view'>Quantity:</label><div className="quantity-col">
+      <input
+        type="number"
+        value={item.quantity}
+        onChange={(e) =>
+          dispatch(updateQuantity({ id: item.id, quantity: Number(e.target.value) }))
+        }
+        min="1"
+      />
+    </div>
+   <label className='mob-view'>Subtotal:</label> <div className="subtotal-col">${item.price * item.quantity}</div>
+  </div>
+))}
 
-                    </div>
-                </div>
-                <div className="price-col">$650</div>
-                <div className="quantity-col">
-                    <input type="number" />
-                </div>
-                <div className="subtotal-col">$650</div>
-
-            </div>
 
         </div>
         <div className="return-update">
@@ -51,15 +70,15 @@ return(
                 <p>Cart Total</p>
                 <div className="subtotal-div">
                     <p>Subtotal:</p>
-                    <p>$1750</p>
+                    <p>${subtotal.toFixed(2)}</p>
                 </div>
                 <div className="shipping">
                     <p>Shipping:</p>
-                    <p>Free</p>
+                    <p>{shippingCost === 0 ? 'Free' : `$${shippingCost}`}</p>
                 </div>
                 <div className="total">
                     <p>Total</p>
-                    <p>$1750</p>
+                    <p>${total.toFixed(2)}</p>
                 </div>
                 <div className="process_button">
                     <button className='proces'>Procees to checkout</button>
