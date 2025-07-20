@@ -24,7 +24,7 @@ import { useLocation } from "react-router-dom";
 
 const Header=()=>{
    
-    const [activeNav,setActiveNav] = useState('home');
+    const [activeNav,setActiveNav] = useState('signup');
     const [windowWidth,setWindowWidth] = useState(window.innerWidth);
     const [showDropdown,setShowDropdown] = useState(false);
     const cartItemCount = useSelector(state => state.cart.items.length);
@@ -51,8 +51,13 @@ const Header=()=>{
         <li className={`nav-item ${activeNav === 'home' ? 'active' : ''}`} onClick={() => {
           setActiveNav('home');
           {!hideIcons && nav('/home')}}}>Home</li>
-        <li className={`nav-item ${activeNav === 'contact' ? 'active' : ''}`} onClick={() => setActiveNav('contact')}>Contact</li>
-        <li className={`nav-item ${activeNav === 'about' ? 'active' : ''}`} onClick={() => setActiveNav('about')}>About</li>
+        <li className={`nav-item ${activeNav === 'contact' ? 'active' : ''}`} onClick={() => 
+          {
+            setActiveNav('contact');
+            {!hideIcons && nav('/notfound')}
+
+          }}>Contact</li>
+        <li className={`nav-item ${activeNav === 'about' ? 'active' : ''}`} onClick={() =>{setActiveNav('about'); {!hideIcons && nav('/notfound')}} }>About</li>
         <li className={`nav-item ${activeNav === 'signup' ? 'active' : ''}`} onClick={() => 
           {
             setActiveNav('signup');

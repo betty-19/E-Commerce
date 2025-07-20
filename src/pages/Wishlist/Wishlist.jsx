@@ -13,11 +13,25 @@ import Cooler from '../../assets/images/cooler.png';
 import { FiTrash } from 'react-icons/fi';
 import { MdOutlineDelete } from 'react-icons/md';
 import { HiOutlineTrash } from 'react-icons/hi';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../redux/cartSlice';
 
 
 
 const Wishlist = ()=>{
     const [windowWidth,setWindowWidth] = useState(window.innerWidth);
+      const dispatch = useDispatch();
+
+      const handleAddToCart = (product) => {
+//   if (!user) {
+//     alert('You must be logged in to add items to cart!');
+//     return;
+//   }
+
+  dispatch(addToCart(product));
+ alert('Item added to cart!');
+};
+
     
         useEffect(()=>{
             const handleResize = () => setWindowWidth(window.innerWidth);
@@ -31,7 +45,7 @@ return(
        <div className="wishlist-section-head">
                        <p>Wishlist (4)</p>
                    
-                        <button className="section-all">Move All To Bag</button>
+                        <button className="section-alll">Move All To Bag</button>
                 
                 </div>
                   <div className="today-products">
@@ -55,7 +69,13 @@ return(
                                             <img src={BookSelf} alt="" />
                                         </div>
                                         
-                
+                  <div className='add-to-cart' onClick={() => handleAddToCart({
+              id: 1,
+              name: 'Bookshelf Organizer',
+              price: 960,
+              quantity: 1,
+              image: BookSelf
+            })}>Add To Cart</div>
                                     </div>
                                     <div className="today-product-info">
                                         <p>Gucci duffle bag</p>
@@ -96,7 +116,13 @@ return(
                                             <img src={Cooler} alt="" />
                                         </div>
                                         
-                
+                     <div className='add-to-cart' onClick={() => handleAddToCart({
+              id: 2,
+              name: 'RGB CPU Cooler',
+              price: 1960,
+              quantity: 1,
+              image: Cooler
+            })}>Add To Cart</div>
                                     </div>
                                     <div className="today-product-info">
                                         <p>RGB liquid CPU Cooler</p>
@@ -137,7 +163,13 @@ return(
                                             <img src={UsbGamePad} alt="" />
                                         </div>
                                         
-                
+                    <div className='add-to-cart' onClick={() => handleAddToCart({
+              id: 3,
+              name: 'USB Gamepad',
+              price: 550,
+              quantity: 1,
+              image: UsbGamePad
+            })}>Add To Cart</div>
                                     </div>
                                     <div className="today-product-info">
                                         <p>GP11 Shooter USB Gamepad</p>
@@ -177,7 +209,13 @@ return(
                                         <div className="product-img">
                                             <img src={Jacket} alt="" />
                                         </div>
-                                        
+                                        <div className='add-to-cart' onClick={() => handleAddToCart({
+              id: 4,
+              name: 'Quilted Satin Jacket',
+              price: 750,
+              quantity: 1,
+              image: Jacket
+            })}>Add To Cart</div>
                 
                                     </div>
                                     <div className="today-product-info">
@@ -210,7 +248,7 @@ return(
                     <p>Just For you</p>
                 </div>
                    
-                        <button className="section-all">See All</button>
+                        <button className="section-alll">See All</button>
                 
                 </div>
     <div className="today-products">
@@ -233,7 +271,19 @@ return(
                             <div className="product-img">
                                 <img src={Laptop} alt="" />
                             </div>
-                            
+                            <div
+              className="add-to-cart"
+              onClick={() =>
+                handleAddToCart({
+                  id: 1,
+                  name: "ASUS FHD Gaming Laptop",
+                  price: 960,
+                  image: Laptop,
+                })
+              }
+            >
+              Add to Cart
+            </div>
     
                         </div>
                         <div className="today-product-info">
@@ -274,7 +324,19 @@ return(
                             <div className="product-img">
                                 <img src={Monitor} alt="" />
                             </div>
-                            
+                            <div
+              className="add-to-cart"
+              onClick={() =>
+                handleAddToCart({
+                  id: 2,
+                  name: "IPS LCD Gaming Monitor",
+                  price: 1160,
+                  image: Monitor,
+                })
+              }
+            >
+              Add to Cart
+            </div>
     
                         </div>
                         <div className="today-product-info">
@@ -315,7 +377,19 @@ return(
                             <div className="product-img">
                                 <img src={Gamepad} alt="" />
                             </div>
-                            
+                            <div
+              className="add-to-cart"
+              onClick={() =>
+                handleAddToCart({
+                  id: 3,
+                  name: "HAVIT HV-G92 Gamepad",
+                  price: 560,
+                  image: Gamepad,
+                })
+              }
+            >
+              Add to Cart
+            </div>
     
                         </div>
                         <div className="today-product-info">
@@ -356,7 +430,19 @@ return(
                             <div className="product-img">
                                 <img src={Keyboard} alt="" />
                             </div>
-                            
+                            <div
+              className="add-to-cart"
+              onClick={() =>
+                handleAddToCart({
+                  id: 4,
+                  name: "AK-900 Wired Keyboard",
+                  price: 200,
+                  image: Keyboard,
+                })
+              }
+            >
+              Add to Cart
+            </div>
     
                         </div>
                         <div className="today-product-info">
