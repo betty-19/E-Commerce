@@ -49,7 +49,7 @@ return(
             </div>
             <div className="cart-total">
                 <p>Cart Total</p>
-                <div className="subtotal">
+                <div className="subtotal-div">
                     <p>Subtotal:</p>
                     <p>$1750</p>
                 </div>
@@ -61,7 +61,10 @@ return(
                     <p>Total</p>
                     <p>$1750</p>
                 </div>
-                <button>Procees to checkout</button>
+                <div className="process_button">
+                    <button className='proces'>Procees to checkout</button>
+                </div>
+                
             </div>
         </div>
 

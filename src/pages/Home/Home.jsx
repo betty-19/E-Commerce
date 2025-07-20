@@ -47,6 +47,7 @@ import { RiShieldCheckLine } from 'react-icons/ri';
 
 
 
+import { AiOutlineArrowUp } from 'react-icons/ai';
 
 
 
@@ -70,7 +71,7 @@ const [activeDesc, setActiveDesc] = useState("disk3");
 return(
     <div className="home-container">
         <div className="home-content">
-            <div className="home-section1">
+            <div id="section1" className="home-section1">
                 <ul className='home-lists'>
     <li className="home-list fashion">
         <span>Woman's Fashion</span>
@@ -1037,6 +1038,10 @@ return(
                 <p>MONEY BACK GUARANTEE</p>
                 <p>We reurn money within 30 days</p>
             </div>
+           </div>
+           <div className="home-section9">
+            <a href="#section1"><AiOutlineArrowUp/></a>
+
            </div>
 
         </div>
