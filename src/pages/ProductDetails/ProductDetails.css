@@ -6,13 +6,31 @@
 }
 .productDetailsWrapper{
       padding-inline: 70px;
-  margin-bottom: 20px;
+  margin-block: 80px;
+}
+.path{
+  display: flex;
+  align-items: center;
+  gap:7px;
+
+font-weight: 400;
+
+font-size: 14px;
+margin-bottom: 50px;
+
+}
+.account,.gaming,span{
+  color:#00000080;
 }
 .productDetailsContainer,.all-views{
     display: flex;
     align-items: start;
-    justify-content: center;
+    justify-content: space-between;
     gap:20px;
+}
+.productDetailsContainer{
+  gap:70px; 
+  margin-bottom:100px;
 }
 .product-detail{
     display: flex;
@@ -25,7 +43,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;gap:20px;    flex:1;
+    justify-content: space-between;
+    gap:20px;  
+   /* flex:1; */
 }
 .view{
     display: flex;
@@ -325,10 +345,23 @@ text-decoration: underline;
   .product-return-content {
     text-align: left;
   }
+  .path{
+  
+  gap:5px;
+
+
+
+font-size: 12px;
+margin-bottom: 40px;
+
+}
 }
 
 @media (max-width: 480px) {
-  .review {
+  /* .all-views{
+
+  } */
+  .review,.all-views {
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
@@ -365,4 +398,14 @@ text-decoration: underline;
     width: 36px;
     height: 36px;
   }
+   .path{
+  
+  gap:5px;
+
+
+
+font-size: 10px;
+margin-bottom: 30px;
+
+}
 }

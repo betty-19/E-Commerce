@@ -10,14 +10,37 @@ import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { MdOutlineLocalShipping } from 'react-icons/md';
 import { RiRefund2Line, RiLoopLeftLine, RiRecycleLine } from 'react-icons/ri';
+import { FiEye } from "react-icons/fi";
+import Gamepad from '../../assets/images/gamepad.png'
+import Keyboard from '../../assets/images/keyboard.png'
+import Monitor from '../../assets/images/monitor.png'
+import Cooler from '../../assets/images/cooler.png';
+
+
 
 
 
 
 const ProductDetails = () =>{
     const [activeSize, setActiveSize] = useState("M");
+    const [windowWidth,setWindowWidth] = useState(window.innerWidth);
+    
+        useEffect(()=>{
+            const handleResize = () => setWindowWidth(window.innerWidth);
+            window.addEventListener("resize",handleResize);
+            return() =>window.removeEventListener("resize",handleResize);
+        },[])
+        const iconSize = windowWidth < 480 ?18 : 24;
+    
     return(
 <div className="productDetailsWrapper">
+    <div className="path">
+        <p className='account'>Account</p>
+        <span>/</span>
+        <p className='gaming'>Gaming</p>
+        <span>/</span>
+        <p>Havic HV G-92 Gamepad</p>
+    </div>
 <div className="productDetailsContainer">
     <div className="all-views">
            <div className="views">
@@ -101,7 +124,180 @@ const ProductDetails = () =>{
 </div>
    
     </div>
+      
 </div>
+ <div className="section-title">
+                    <div className='rectangle'></div>
+                    <p>Related Item</p>
+                </div>
+<div className="today-products">
+                    <div className="today-product-container">
+                        <div className="today-product">
+                        {/* <div className="today-product-head"></div> */}
+                            <div className="today-product-percentage">
+                            -40%
+                        </div>
+                        <div className="heart-eye">
+                            <div className="product-heart">
+                                 <AiOutlineHeart size={iconSize}/>
+
+                            </div>
+                            <div className="product-eye">
+                                   <FiEye size={iconSize}/>
+                            </div>
+                        </div>
+                        
+                        <div className="product-img">
+                            <img src={Gamepad} alt="" />
+                        </div>
+                        
+
+                    </div>
+                    <div className="today-product-info">
+                        <p>HAVIT HV-G92 Gamepad</p>
+                        <div className="discount">
+                            <p>$120</p>
+                            <p>$160</p>
+                        </div>
+                        <div className="rates">
+                            <div className="rate">
+                                <AiFillStar className='star'/>
+                                 <AiFillStar className='star'/>
+                                  <AiFillStar className='star'/>
+                                   <AiFillStar className='star'/>
+                                    <AiFillStar className='star'/>
+                            </div>
+                            <p>(88)</p>
+
+                        </div>
+                    </div>
+                    </div>
+                     <div className="today-product-container">
+                        <div className="today-product">
+                        {/* <div className="today-product-head"> </div> */}
+                            <div className="today-product-percentage">
+                            -35%
+                        </div>
+                        <div className="heart-eye">
+                            <div className="product-heart">
+                                 <AiOutlineHeart size={iconSize}/>
+
+                            </div>
+                            <div className="product-eye">
+                                   <FiEye size={iconSize}/>
+                            </div>
+                        </div>
+                       
+                        <div className="product-img">
+                            <img src={Keyboard} alt="" />
+                        </div>
+                        
+
+                    </div>
+                    <div className="today-product-info">
+                        <p>AK-900 Wired Keyboard</p>
+                        <div className="discount">
+                            <p>$960</p>
+                            <p>$1160</p>
+                        </div>
+                        <div className="rates">
+                            <div className="rate">
+                                <AiFillStar className='star'/>
+                                 <AiFillStar className='star'/>
+                                  <AiFillStar className='star'/>
+                                   <AiFillStar className='star'/>
+                                    <AiFillStar className='star'/>
+                            </div>
+                            <p>(75)</p>
+
+                        </div>
+                    </div>
+                    </div>
+                     <div className="today-product-container">
+                        <div className="today-product">
+                        {/* <div className="today-product-head"></div> */}
+                            <div className="today-product-percentage">
+                            -30%
+                        </div>
+                        <div className="heart-eye">
+                            <div className="product-heart">
+                                 <AiOutlineHeart size={iconSize}/>
+
+                            </div>
+                            <div className="product-eye">
+                                   <FiEye size={iconSize}/>
+                            </div>
+                        </div>
+                        
+                        <div className="product-img">
+                            <img src={Monitor} alt="" />
+                        </div>
+                        
+
+                    </div>
+                    <div className="today-product-info">
+                        <p>IPS LCD Gaming Monitor</p>
+                        <div className="discount">
+                            <p>$370</p>
+                            <p>$400</p>
+                        </div>
+                        <div className="rates">
+                            <div className="rate">
+                                <AiFillStar className='star'/>
+                                 <AiFillStar className='star'/>
+                                  <AiFillStar className='star'/>
+                                   <AiFillStar className='star'/>
+                                    <AiFillStar className='star'/>
+                            </div>
+                            <p>(99)</p>
+
+                        </div>
+                    </div>
+                    </div>
+                     <div className="today-product-container">
+                        <div className="today-product">
+                        {/* <div className="today-product-head"></div> */}
+                            {/* <div className="today-product-percentage">
+                            -25%
+                        </div> */}
+                        <div className="heart-eye">
+                            <div className="product-heart">
+                                 <AiOutlineHeart size={iconSize}/>
+
+                            </div>
+                            <div className="product-eye">
+                                   <FiEye size={iconSize}/>
+                            </div>
+                        </div>
+                        
+                        <div className="product-img">
+                            <img src={Cooler} alt="" />
+                        </div>
+                        
+
+                    </div>
+                    <div className="today-product-info">
+                        <p>S-Series Comfort Chair </p>
+                        <div className="discount">
+                            <p>$375</p>
+                            <p>$400</p>
+                        </div>
+                        <div className="rates">
+                            <div className="rate">
+                                <AiFillStar className='star'/>
+                                 <AiFillStar className='star'/>
+                                  <AiFillStar className='star'/>
+                                   <AiFillStar className='star'/>
+                                    <AiFillStar className='star'/>
+                            </div>
+                            <p>(99)</p>
+
+                        </div>
+                    </div>
+                    </div>
+                   
+                    
+                </div>
 </div>
     )
 }

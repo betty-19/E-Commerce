@@ -14,6 +14,7 @@ import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { RiLogoutBoxLine } from 'react-icons/ri';
 // import { FiLogOut } from 'react-icons/fi';       
 import { FiShoppingBag } from 'react-icons/fi';
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -23,6 +24,7 @@ const Header=()=>{
     const [activeNav,setActiveNav] = useState('home');
     const [windowWidth,setWindowWidth] = useState(window.innerWidth);
     const [showDropdown,setShowDropdown] = useState(false);
+    const nav = useNavigate();
 
     useEffect(()=>{
         const handleResize = () => setWindowWidth(window.innerWidth);
@@ -38,10 +40,15 @@ const Header=()=>{
     <p >Exclusive</p>
 
         <ul className="nav-items">
-        <li className={`nav-item ${activeNav === 'home' ? 'active' : ''}`} onClick={() => setActiveNav('home')}>Home</li>
+        <li className={`nav-item ${activeNav === 'home' ? 'active' : ''}`} onClick={() => {setActiveNav('home');nav('/')}}>Home</li>
         <li className={`nav-item ${activeNav === 'contact' ? 'active' : ''}`} onClick={() => setActiveNav('contact')}>Contact</li>
         <li className={`nav-item ${activeNav === 'about' ? 'active' : ''}`} onClick={() => setActiveNav('about')}>About</li>
-        <li className={`nav-item ${activeNav === 'signup' ? 'active' : ''}`} onClick={() => setActiveNav('signup')}>Sign Up</li>
+        <li className={`nav-item ${activeNav === 'signup' ? 'active' : ''}`} onClick={() => 
+          {
+            setActiveNav('signup');
+            nav('/signup')
+
+          }}>Sign Up</li>
         </ul>
 
  <div className="header-right-side">
@@ -54,7 +61,7 @@ const Header=()=>{
        <div className="header-icons">
   <AiOutlineHeart size={iconSize} className="heart-icon" />
   
-  <div className="cart">
+  <div className="cart" onClick={()=>nav('/cart')}>
     <FiShoppingCart size={iconSize} className="cart-icon" />
     <div className="cart-no">2</div>
   </div>
