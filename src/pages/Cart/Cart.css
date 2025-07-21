@@ -177,6 +177,12 @@ justify-content: center;}
 .mob-view{
     display: none;
 }
+.cart-item-mob{
+  display: flex;
+  align-items: center;
+  gap:5px;
+  flex-wrap: wrap;
+}
 @media (max-width: 1024px) {
   .coupon-cartTotal {
     flex-direction: column;

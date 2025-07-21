@@ -30,7 +30,9 @@ return(
             </div>
             {cartItems.map(item => (
   <div className="cart-items" key={item.id}>
-   <label className='mob-view'>Product:</label> <div className='product-col'>
+    <div className="cart-item-mob">
+ <label className='mob-view'>Product: </label>
+    <div className='product-col'>
       <div className="cart-item-img">
         <img src={item.image} alt="" />
         <AiFillCloseCircle
@@ -40,8 +42,13 @@ return(
       </div>
      <div className="cart-item-name">{item.name}</div>
     </div>
-   <label className='mob-view'>Price:</label> <div className="price-col">${item.price}</div>
-    <label className='mob-view'>Quantity:</label><div className="quantity-col">
+    </div>
+  <div className="cart-item-mob">
+ <label className='mob-view'>Price:</label>
+    <div className="price-col">${item.price}</div>
+  </div>
+  <div className="cart-item-mob"> <label className='mob-view'>Quantity:</label>
+    <div className="quantity-col">
       <input
         type="number"
         value={item.quantity}
@@ -50,8 +57,11 @@ return(
         }
         min="1"
       />
-    </div>
-   <label className='mob-view'>Subtotal:</label> <div className="subtotal-col">${item.price * item.quantity}</div>
+    </div></div>
+   <div className="cart-item-mob"><label className='mob-view'>Subtotal:</label> 
+   <div className="subtotal-col">${item.price * item.quantity}
+   </div></div>
+   
   </div>
 ))}
 

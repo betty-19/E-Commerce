@@ -118,8 +118,8 @@ cursor: pointer;
   gap: 5px;
   padding: 20px;
   border-radius: 8px;
-  background-color: #0000000A; 
-  backdrop-filter: blur(150px);
+  background-color: #8b8585; 
+  /* backdrop-filter: blur(150px); */
   /* -webkit-backdrop-filter: blur(10px);  */
    z-index: 100;
   min-width:270px;

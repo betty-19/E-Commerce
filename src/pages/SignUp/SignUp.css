@@ -57,7 +57,12 @@ form div{
     border-bottom: 1px solid #000080;
     margin-top:30px;
     margin-bottom: 20px;
+   
+
 }
+/* .password-field,.email-field,.name-field{
+     cursor:auto;
+} */
 form div input{
     font-family: 'Poppins';
 font-weight: 400;
