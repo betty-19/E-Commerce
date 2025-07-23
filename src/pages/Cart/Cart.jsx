@@ -4,15 +4,20 @@ import { AiOutlineCloseCircle } from 'react-icons/ai';
 import Monitor from '../../assets/images/monitor.png'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import { useSelector, useDispatch } from 'react-redux';
-import { removeFromCart, updateQuantity } from '../../redux/cartSlice';
+import { removeFromCart, updateQuantity,clearCart } from '../../redux/cartSlice';
 
 const Cart = () =>{
 
     const cartItems = useSelector(state => state.cart.items);
 const dispatch = useDispatch();
 const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
-const shippingCost = 0; // Free shipping
+const shippingCost = 0; 
 const total = subtotal + shippingCost;
+
+const handleCheckout = () => {
+  dispatch(clearCart());
+  alert('Your order has been submitted!');
+};
 
 return(
     <div className='cart-wrapper'>
@@ -91,7 +96,7 @@ return(
                     <p>${total.toFixed(2)}</p>
                 </div>
                 <div className="process_button">
-                    <button className='proces'>Procees to checkout</button>
+                    <button className='proces' onClick={handleCheckout}>Procees to checkout</button>
                 </div>
                 
             </div>

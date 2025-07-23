@@ -28,8 +28,8 @@ const Header=()=>{
     const [windowWidth,setWindowWidth] = useState(window.innerWidth);
     const [showDropdown,setShowDropdown] = useState(false);
     const cartItemCount = useSelector(state => state.cart.items.length);
-    const location = useLocation();
-    const hideIcons = location.pathname === '/' || location.pathname === '/login';
+    // const location = useLocation();
+    const hideIcons = location.pathname === '/signup' || location.pathname === '/login';
 
 
     const nav = useNavigate();
@@ -48,20 +48,30 @@ const Header=()=>{
     <p >Exclusive</p>
 
         <ul className="nav-items">
-        <li className={`nav-item ${activeNav === 'home' ? 'active' : ''}`} onClick={() => {
+        {/* <li className={`nav-item ${activeNav === 'home' ? 'active' : ''}`} onClick={() => {
           setActiveNav('home');
-          {!hideIcons && nav('/home')}}}>Home</li>
-        <li className={`nav-item ${activeNav === 'contact' ? 'active' : ''}`} onClick={() => 
+          {!hideIcons && nav('/home')}}}>Home</li> */}
+            <li className={`nav-item`} onClick={() => {
+          setActiveNav('home');
+          nav('/')
+            }}>Home</li>
+        {/* <li className={`nav-item ${activeNav === 'contact' ? 'active' : ''}`} onClick={() => 
           {
             setActiveNav('contact');
             {!hideIcons && nav('/notfound')}
 
+          }}>Contact</li> */}
+          <li className={`nav-item ${activeNav === 'contact' ? 'active' : ''}`} onClick={() => 
+          {
+            setActiveNav('contact');
+            nav('/notfound')
           }}>Contact</li>
-        <li className={`nav-item ${activeNav === 'about' ? 'active' : ''}`} onClick={() =>{setActiveNav('about'); {!hideIcons && nav('/notfound')}} }>About</li>
+        {/* <li className={`nav-item ${activeNav === 'about' ? 'active' : ''}`} onClick={() =>{setActiveNav('about'); {!hideIcons && nav('/notfound')}} }>About</li> */}
+          <li className={`nav-item ${activeNav === 'about' ? 'active' : ''}`} onClick={() =>{setActiveNav('about');  nav('/notfound')} }>About</li>
         <li className={`nav-item ${activeNav === 'signup' ? 'active' : ''}`} onClick={() => 
           {
             setActiveNav('signup');
-            nav('/')
+            nav('/signup')
 
           }}>Sign Up</li>
         </ul>

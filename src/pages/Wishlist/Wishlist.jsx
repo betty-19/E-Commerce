@@ -70,7 +70,7 @@ return(
                                         </div>
                                         
                   <div className='add-to-cart' onClick={() => handleAddToCart({
-              id: 1,
+              id: 5,
               name: 'Bookshelf Organizer',
               price: 960,
               quantity: 1,
@@ -328,7 +328,7 @@ return(
               className="add-to-cart"
               onClick={() =>
                 handleAddToCart({
-                  id: 2,
+                  id: 6,
                   name: "IPS LCD Gaming Monitor",
                   price: 1160,
                   image: Monitor,
@@ -381,7 +381,7 @@ return(
               className="add-to-cart"
               onClick={() =>
                 handleAddToCart({
-                  id: 3,
+                  id: 7,
                   name: "HAVIT HV-G92 Gamepad",
                   price: 560,
                   image: Gamepad,
@@ -434,7 +434,7 @@ return(
               className="add-to-cart"
               onClick={() =>
                 handleAddToCart({
-                  id: 4,
+                  id: 8,
                   name: "AK-900 Wired Keyboard",
                   price: 200,
                   image: Keyboard,
